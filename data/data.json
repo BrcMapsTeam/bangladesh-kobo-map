@@ -1,0 +1,103 @@
+[
+  {
+    "Latrine_in_use": "no",
+    "end": "2018-03-07T11:57:23.166+06",
+    "start": "2018-03-07T11:56:28.697+06",
+    "_geolocation": [
+      21.18721120846044,
+      92.1464625188188
+    ],
+    "Date": "2018-03-07T11:56:00.000+06",
+    "Latrine_is_for_Women_Men": "community",
+    "Activity": "decommissioned desluged",
+    "Block": "m12",
+    "_submission_time": "2018-03-07T10:17:29",
+    "GPS_Way_point": "21.18721120846044 92.1464625188188 -62.92577944590412 4.0"
+  },
+  {
+    "Latrine_in_use": "no",
+    "meta/instanceID": "uuid:b214c96a-f190-4fe2-80a8-5525f0d4eb66",
+    "Foto": "1520402391982.jpg",
+    "end": "2018-03-07T12:00:01.860+06",
+    "start": "2018-03-07T11:59:24.546+06",
+    "_geolocation": [
+      21.187439402942868,
+      92.14647779410576
+    ],
+    "Date": "2018-03-07T11:59:00.000+06",
+    "Latrine_is_for_Women_Men": "community",
+    "Activity": "decommissioned desluged",
+    "Block": "m12",
+    "_submission_time": "2018-03-07T10:17:34",
+    "GPS_Way_point": "21.187439402942868 92.14647779410576 -47.57884606730136 4.0"
+  },
+  {
+
+    "Latrine_in_use": "no",
+    "meta/instanceID": "uuid:68fab328-e8f4-4304-aa18-dfb1ac1f6fbf",
+    "Foto": "1520402870255.jpg",
+    "end": "2018-03-07T12:08:12.817+06",
+    "start": "2018-03-07T12:07:23.596+06",
+    "_geolocation": [
+      21.18717869601081,
+      92.14664562558643
+    ],
+    "Latrine_is_for_Women_Men": "community",
+
+    "Activity": "decommissioned desluged",
+    "Block": "m12",
+    "formhub/uuid": "7f10280cefd5462da942dc8bffdfeac1",
+    "_submission_time": "2018-03-07T10:17:39",
+
+    "GPS_Way_point": "21.18717869601081 92.14664562558643 -37.85583540437952 4.0"
+  },
+  {
+
+    "Latrine_in_use": "no",
+
+    "Latrine_is_for_Women_Men": "community",
+    "_validation_status": {},
+    "Activity": "decommissioned desluged",
+    "Block": "m12",
+    "GPS_Way_point": "21.187196964262558 92.14601658868382 -37.429894032716156 4.0"
+  },
+  {
+
+    "Latrine_in_use": "no",
+
+    "Latrine_is_for_Women_Men": "community",
+    "Activity": "decommissioned desluged",
+    "Block": "m12",
+    "GPS_Way_point": "21.187018282488307 92.14562979299178 -41.35151911543596 4.0"
+  },
+  {
+
+    "Latrine_in_use": "yes",
+
+    "Latrine_is_for_Women_Men": "community",
+    "Activity": "decommissioned",
+    "Block": "m12",
+    "GPS_Way_point": "21.18706337201889 92.1456691737158 -40.059474679164516 4.0"
+  },
+  {
+    "Latrine_in_use": "no",
+    "Latrine_is_for_Women_Men": "community",
+    "Activity": "decommissioned desluged",
+    "Block": "m12",
+    "GPS_Way_point": "21.186999242838574 92.1458109431153 -47.06728106905762 4.0"
+  },
+  {
+    "Latrine_in_use": "yes",
+    "Latrine_is_for_Women_Men": "community",
+    "Activity": "decommissioned desluged",
+    "Block": "m12",
+    "GPS_Way_point": "21.186947109243327 92.14599237862286 -41.103746069087215 4.0"
+  },
+  {
+    "Latrine_in_use": "yes",
+    "Latrine_is_for_Women_Men": "community",
+    "Activity": "decommissioned desluged",
+    "Block": "m12",
+    "GPS_Way_point": "21.186962587324853 92.14596365272385 -40.30785404221145 4.0"
+  }
+]
