@@ -3,9 +3,9 @@
 let config = {
     title:"MSM",
     description: "<p><a href='#contacts'>Contacts</a></p>",
-    data: //"data/data2.json",
-        "https://proxy.hxlstandard.org/data.json?url=https%3A//docs.google.com/spreadsheets/d/1eJjAvrAMFLpO3TcXZYcXXc-_HVuHLL-iQUULV60lr1g/edit%23gid%3D0&strip-headers=on&force=on", //"data/data.json",
-
+    data: "data/data.json",
+        //"https://proxy.hxlstandard.org/data.json?url=https%3A//docs.google.com/spreadsheets/d/1eJjAvrAMFLpO3TcXZYcXXc-_HVuHLL-iQUULV60lr1g/edit%23gid%3D0&strip-headers=on&force=on", //"data/data.json",
+    blocks: "data/zoneXX_blocks.geojson",
     colors:['#ef8f8f','#9a181a','#841517','#ef8f8f','#6e1113','#580e0f','#420a0b','#2c0708']
 };
 
@@ -72,6 +72,7 @@ initDash();
 
 
 function plotData(data) {
+  console.log(data);
   data.forEach(function(point, index){
     point.GPS_Way_point = point.GPS_Way_point.split(" ")
     console.log(point.GPS_Way_point[0]);
@@ -91,17 +92,47 @@ function plotData(data) {
 };
 
 
+
+function plotBlocks(geoData){
+  L.geoJSON(geoData, {
+    onEachFeature: onEachFeature,
+      style: function(feature) {
+          switch (feature.properties.party) {
+              case 'Republican': return {color: "#ff0000"};
+              case 'Democrat':   return {color: "#0000ff"};
+          }
+      }
+  }).addTo(map);
+
+};
+
+function onEachFeature(feature, layer) {
+    // does this feature have a property named popupContent?
+    if (feature.properties && feature.properties.block) {
+        layer.bindPopup(feature.properties.block);
+    }
+};
+
+
+
 let dataCall = $.ajax({
     type: 'GET',
-    url: 'data/data.json',
+    url: config.data,
+    //https://kc.humanitarianresponse.info/api/v1/data/215912?format=json',
+    dataType: 'json',
+});
+
+let geoCall = $.ajax({
+    type: 'GET',
+    url: config.blocks,
     //https://kc.humanitarianresponse.info/api/v1/data/215912?format=json',
     dataType: 'json',
 });
 
 
 //when both ready construct 3W
-$.when(dataCall).then(function (dataArgs) {
-  console.log(dataArgs);
+$.when(dataCall, geoCall).then(function (dataArgs, geoArgs) {
+  console.log(dataArgs, geoArgs);
     // dataArgs[0] = hxlProxyToJSON(dataArgs[0]);
     // var geom = topojson.feature(geomArgs[0], geomArgs[0].objects.mdgAdm3);
     // console.log("test1=", geomArgs[0].objects.mdgAdm3, "test2=", geomArgs[0]);
@@ -109,5 +140,7 @@ $.when(dataCall).then(function (dataArgs) {
     // geom.features.forEach(function(e){
     //     e.properties[config.joinAttribute] = String(e.properties[config.joinAttribute]);
     //});
-    plotData(dataArgs);
+    plotBlocks(geoArgs[0]);
+    plotData(dataArgs[0]);
+
 });
